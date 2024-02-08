@@ -1,0 +1,5 @@
+help.out: main.c
+		gcc main.c -o help.out
+
+clean:
+		rm -f help.out

@@ -1,0 +1,13 @@
+all: strlength.out strconcat.out strcompare.out
+
+strlength.out: strlength.c mystrings.c
+  gcc -c strlenght.c -o strlength.out
+
+strconcat.out: strconcat.c mystrings.c
+	gcc -c strconcat.c -o strconcat.out
+
+strcompare.out: strcompare.c mystrings.c
+	gcc -c strcompare.c -o strcompare.out
+
+clean:
+	rm -f *.out

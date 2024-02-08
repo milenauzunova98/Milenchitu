@@ -1,0 +1,10 @@
+all: taskmanager
+
+processes.o: processes.c processes.h
+	gcc -c processes.c
+
+taskmanager: taskmanager.c processes.o
+	gcc taskmanager.c processes.o -o taskmanager
+
+clean:
+	rm -f *.o taskmanager
